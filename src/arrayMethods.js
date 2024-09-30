@@ -163,9 +163,17 @@ function concatArrays(arr1, arr2) {
 
 // Write a function called popAndShift that takes in an array as a parameter.
 // Example input versus output:
-// Original input array: ["yelow", "green", "blue", "red"]
+// Original input array: ["yellow", "green", "blue", "red"]
 // Intended output array: ["red", "yellow", "green", "blue"]
-
+function popAndShift(arr) {
+    if ((Array.isArray(arr) === false)){
+        return "Invalid input";
+    } else if ((Array.isArray(arr))){
+            let popped = arr.pop();
+            arr.unshift(popped);
+            return arr;
+    }
+}
 
 
 
@@ -251,6 +259,7 @@ module.exports = {
     returnString,
     // sortArrayBasedOnNumber,
     concatArrays,
+    popAndShift,
 };
 
 
