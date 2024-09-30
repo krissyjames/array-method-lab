@@ -7,20 +7,27 @@
 
 function swapFirstAndLast(swapArray) {
     if ((Array.isArray(swapArray) === false) || (swapArray.length <= 1)) {
-        return "Invalid input"
+        return "Invalid input";
     }
     if (Array.isArray(swapArray) && swapArray.length > 1) {
         let temp = swapArray[0];
         swapArray[0] = swapArray[swapArray.length-1];
         swapArray[swapArray.length-1] = temp;
-        return swapArray
+        return swapArray;
     }
     }
 
 
 // Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
-
+function squareFirstIndex(squareArray) {
+    if ((Array.isArray(squareArray) === false) || (squareArray.length <= 1)) {
+        return "Invalid input";
+    }
+    if (Array.isArray(squareArray) && squareArray.length > 1) {
+        return squareArray[0] * squareArray[0];
+    }
+}
 
 
 
@@ -179,7 +186,8 @@ function swapFirstAndLast(swapArray) {
 // Return the string literal `Temperature was ----- degrees Celcius on date ------."
 
 module.exports = {
-    swapFirstAndLast
+    swapFirstAndLast,
+    squareFirstIndex
 };
 
 

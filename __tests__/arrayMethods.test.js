@@ -1,6 +1,6 @@
 const {
     swapFirstAndLast,
-    // squareFirstIndex,
+    squareFirstIndex,
     // getLongerArray,
     // arrayHasValue,
     // getLastIndexOf,
@@ -30,12 +30,12 @@ describe('JavaScript Array Methods Tests', () => {
     });
 
     // // Test for squareFirstIndex
-    // test('squareFirstIndex should return the square of the first element in the array', () => {
-    //     expect(squareFirstIndex([4, 2, 3])).toBe(16);
-    //     expect(squareFirstIndex(['a', 2])).toBe('Invalid input');
-    //     expect(squareFirstIndex([])).toBe('Invalid input');
-    //     expect(squareFirstIndex([true])).toBe('Invalid input');
-    // });
+    test('squareFirstIndex should return the square of the first element in the array', () => {
+        expect(squareFirstIndex([4, 2, 3])).toBe(16);
+        expect(squareFirstIndex(['a', 2])).toBe('Invalid input');
+        expect(squareFirstIndex([])).toBe('Invalid input');
+        expect(squareFirstIndex([true])).toBe('Invalid input');
+    });
 
     // // Test for getLongerArray
     // test('getLongerArray should return the longer array', () => {
