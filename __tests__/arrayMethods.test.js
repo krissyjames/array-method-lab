@@ -3,7 +3,7 @@ const {
     squareFirstIndex,
     getLongerArray,
     arrayHasValue,
-    // getLastIndexOf,
+    getLastIndexOf,
     // getNumberOfTimes,
     // findAboveFreezing,
     // returnString,
@@ -53,11 +53,11 @@ describe('JavaScript Array Methods Tests', () => {
     });
 
     // // Test for getLastIndexOf
-    // test('getLastIndexOf should return the last index of a value', () => {
-    //     expect(getLastIndexOf([1, 2, 3, 2], 2)).toBe(3);
-    //     expect(getLastIndexOf([1, 2, 3], 4)).toBe(-1);
-    //     expect(getLastIndexOf('not an array', 2)).toBe('Invalid input');
-    // });
+    test('getLastIndexOf should return the last index of a value', () => {
+        expect(getLastIndexOf([1, 2, 3, 2], 2)).toBe(3);
+        expect(getLastIndexOf([1, 2, 3], 4)).toBe(-1);
+        expect(getLastIndexOf('not an array', 2)).toBe('Invalid input');
+    });
 
     // // Test for getNumberOfTimes
     // test('getNumberOfTimes should return the count of how many times a string appears', () => {
