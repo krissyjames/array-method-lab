@@ -5,8 +5,17 @@
 // Swap the values of the first and last index without using array destructuring.
 // Return the updated array
 
-
-
+function swapFirstAndLast(swapArray) {
+    if ((Array.isArray(swapArray) === false) || (swapArray.length <= 1)) {
+        return "Invalid input"
+    }
+    if (Array.isArray(swapArray) && swapArray.length > 1) {
+        let temp = swapArray[0];
+        swapArray[0] = swapArray[swapArray.length-1];
+        swapArray[swapArray.length-1] = temp;
+        return swapArray
+    }
+    }
 
 
 // Write a function called squareFirstIndex that takes in an array as a parameter.
@@ -169,6 +178,8 @@
 // Find the first temperature in the array that exceeds the input parameter.
 // Return the string literal `Temperature was ----- degrees Celcius on date ------."
 
-
+module.exports = {
+    swapFirstAndLast
+};
 
 
