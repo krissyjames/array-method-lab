@@ -140,7 +140,21 @@ function returnString(arr) {
 // Write a function called concatArrays that takes in two arrays as parameters.
 // Return the concatonation of the two arrays in order as long as neither holds a string as a value at any index.
 
-
+function concatArrays(arr1, arr2) {
+    if ((Array.isArray(arr1) === false) || (Array.isArray(arr2) === false) || (arr1.length <= 1) || (arr2.length <= 1)) {
+        return "Invalid input";
+    } for (let i =0; i <=arr1.length; i++) {
+        if (typeof(arr1[i]) === "string") {
+            return "Cannot concatenate arrays with strings";
+        }
+    } for (let i =0; i <=arr2.length; i++) {
+        if (typeof(arr2[i]) === "string") {
+            return "Cannot concatenate arrays with strings";
+        } 
+    }   if ((Array.isArray(arr1)) && (arr1.length > 1) && (Array.isArray(arr2)) && (arr2.length > 1)) {
+        return arr1.concat(arr2)
+    }
+}
 
 
 
@@ -235,6 +249,8 @@ module.exports = {
     // getNumberOfTimes,
     findAboveFreezing,
     returnString,
+    // sortArrayBasedOnNumber,
+    concatArrays,
 };
 
 
