@@ -100,13 +100,17 @@ function getLastIndexOf(arr, value) {
 
 // Write a function called findAboveFreezing that takes in an array
 // Return a string literal that says "Temperature found was ---- degrees Farenheit."
-
-
-
-
-
-
-
+function findAboveFreezing(arr) {
+    if ((Array.isArray(arr) === false) || (arr.length <= 1)){
+        return "Invalid input";
+    } if ((Array.isArray(arr)) && (arr.length > 1)) {
+        for (let i =0; i <=arr.length; i++) {
+            if (arr[i] > 32) {
+                return arr[i];
+            }
+        }
+    }
+}
 
 // Write a function called returnString that takes an array as a parameter.
 // Return the array as a string with an ampersand as the separator.
@@ -223,6 +227,7 @@ module.exports = {
     arrayHasValue,
     getLastIndexOf,
     // getNumberOfTimes,
+    findAboveFreezing,
 };
 
 
