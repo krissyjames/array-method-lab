@@ -48,7 +48,13 @@ function getLongerArray(arr1, arr2) {
 // Write a function called arrayHasValue that takes in a value and an array.
 // Return a boolean if the value exists in the array.
 
-
+function arrayHasValue(value, arr) {
+    if ((Array.isArray(arr) === false) || (arr.length <= 1) || (typeof(value) != "number")) {
+        return "Invalid input";
+    } else if ((Array.isArray(arr)) && (arr.length > 1) && (typeof(value) == "number")) {
+        return arr.includes(value);
+    }
+}
 
 
 
@@ -194,7 +200,8 @@ function getLongerArray(arr1, arr2) {
 module.exports = {
     swapFirstAndLast,
     squareFirstIndex,
-    getLongerArray
+    getLongerArray,
+    arrayHasValue
 };
 
 
