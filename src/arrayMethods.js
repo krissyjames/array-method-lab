@@ -6,7 +6,7 @@
 // Return the updated array
 
 function swapFirstAndLast(swapArray) {
-    if ((Array.isArray(swapArray) === false) || (swapArray.length <= 1)) {
+    if ((Array.isArray(swapArray) === false) || (swapArray.length <= 1))  {
         return "Invalid input";
     }
     if (Array.isArray(swapArray) && swapArray.length > 1) {
@@ -21,16 +21,13 @@ function swapFirstAndLast(swapArray) {
 // Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
 function squareFirstIndex(squareArray) {
-    if ((Array.isArray(squareArray) === false) || (squareArray.length <= 1)) {
+    if ((Array.isArray(squareArray) === false) || (squareArray.length <= 1) || (typeof(squareArray[0]) == "string")) {
         return "Invalid input";
     }
     if (Array.isArray(squareArray) && squareArray.length > 1) {
         return squareArray[0] * squareArray[0];
     }
 }
-
-
-
 
 // Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
