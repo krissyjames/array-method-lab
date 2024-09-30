@@ -31,6 +31,15 @@ function squareFirstIndex(squareArray) {
 
 // Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
+function getLongerArray(arr1, arr2) {
+    if ((Array.isArray(arr1) === false) || (Array.isArray(arr2) === false))  {
+        return "Invalid input";
+    }
+    let longerString = (arr1.length > arr2.length) ? arr1 : arr2;
+    if (Array.isArray(arr1) && Array.isArray(arr2)) {
+        return longerString; 
+    }
+}
 
 
 
@@ -184,7 +193,8 @@ function squareFirstIndex(squareArray) {
 
 module.exports = {
     swapFirstAndLast,
-    squareFirstIndex
+    squareFirstIndex,
+    getLongerArray
 };
 
 
