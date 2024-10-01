@@ -11,7 +11,7 @@ const {
     concatArrays,
     popAndShift,
     // oddValuesAtEvenIndex,
-    // getUpperCase,
+    getUpperCase,
     // deleteAllOddValues,
     // getCatNumber,
     // getPaginationArray,
@@ -120,11 +120,11 @@ describe('JavaScript Array Methods Tests', () => {
     // });
 
     // // Test for getUpperCase
-    // test('getUpperCase should return all strings in uppercase', () => {
-    //     expect(getUpperCase(['hello', 'world'])).toEqual(['HELLO', 'WORLD']);
-    //     expect(getUpperCase([1, 2, 3])).toEqual([]);
-    //     expect(getUpperCase('not an array')).toBe('Invalid input');
-    // });
+    test('getUpperCase should return all strings in uppercase', () => {
+        expect(getUpperCase(['hello', 'world'])).toEqual(['HELLO', 'WORLD']);
+        expect(getUpperCase([1, 2, 3])).toEqual([]);
+        expect(getUpperCase('not an array')).toBe('Invalid input');
+    });
 
     // // Test for deleteAllOddValues
     // test('deleteAllOddValues should delete all odd numbers from the array', () => {
