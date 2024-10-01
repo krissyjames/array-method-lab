@@ -203,11 +203,23 @@ function popAndShift(arr) {
 // Translate all strings in the array to upper case.
 // Return only an array of only the string values.
 
-
-
-
-
-
+function getUpperCase(arr) {
+    if ((Array.isArray(arr) === false) || (arr.length < 1)) {
+        return "Invalid input";
+    } for (let i =0; i < arr.length; i++) {
+        if (typeof(arr[i]) === "number") {
+            return [];
+        }
+    } if ((Array.isArray) && (arr.length >= 1)) {
+        const strings = arr;
+        console.log(strings)
+        const newArr = strings.map(upperCaseFunction)
+        function upperCaseFunction(str) {
+            return str.toUpperCase();
+        }
+        return newArr
+    } 
+}
 
 
 // Write a function called deleteAllOddValues that takes in an array.
@@ -271,6 +283,7 @@ module.exports = {
     concatArrays,
     popAndShift,
     // oddValuesAtEvenIndex,
+    getUpperCase,
 };
 
 
