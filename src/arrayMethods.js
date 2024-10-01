@@ -182,9 +182,19 @@ function popAndShift(arr) {
 
 // Write a function called oddValuesAtEvenIndex that takes an array as a parameter
 // Return a new array that contains all the odd values of the original array that were located at an even index.
+// function oddValuesAtEvenIndex(arr) {
+//     if ((Array.isArray(arr) === false)){
+//         return "Invalid input";
+//     }for (let i = 0; i < arr.length; i++) {
+//         if ((arr[i] % 2 != 0) && (i % 2 === 0))   {
+//             return arr[i];
+//         }
+    
+//     }
+// }
 
-
-
+// myArray = [7, 2, 5, 11]
+// console.log(oddValuesAtEvenIndex(myArray))
 
 
 
@@ -260,6 +270,7 @@ module.exports = {
     // sortArrayBasedOnNumber,
     concatArrays,
     popAndShift,
+    // oddValuesAtEvenIndex,
 };
 
 
