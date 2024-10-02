@@ -4,7 +4,7 @@ const {
     getLongerArray,
     arrayHasValue,
     getLastIndexOf,
-    // getNumberOfTimes,
+    getNumberOfTimes,
     findAboveFreezing,
     returnString,
     // sortArrayBasedOnNumber,
@@ -60,12 +60,12 @@ describe('JavaScript Array Methods Tests', () => {
     });
 
     // // Test for getNumberOfTimes
-    // test('getNumberOfTimes should return the count of how many times a string appears', () => {
-    //     expect(getNumberOfTimes(['cat', 'dog', 'cat'], 'cat')).toBe(2);
-    //     expect(getNumberOfTimes(['cat', 'dog', 'bird'], 'fish')).toBe(0);
-    //     expect(getNumberOfTimes([1, 2, 3], 'cat')).toBe(0);
-    //     expect(getNumberOfTimes('not an array', 'cat')).toBe('Invalid input');
-    // });
+    test('getNumberOfTimes should return the count of how many times a string appears', () => {
+        expect(getNumberOfTimes(['cat', 'dog', 'cat'], 'cat')).toBe(2);
+        expect(getNumberOfTimes(['cat', 'dog', 'bird'], 'fish')).toBe(0);
+        expect(getNumberOfTimes([1, 2, 3], 'cat')).toBe(0);
+        expect(getNumberOfTimes('not an array', 'cat')).toBe('Invalid input');
+    });
 
     // // Test for findAboveFreezing
     test('findAboveFreezing should return the first temperature above freezing', () => {

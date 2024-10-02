@@ -81,21 +81,21 @@ function getLastIndexOf(arr, value) {
 // Write a function called getNumberOfTimes that takes in an array and a string.
 // Return a count of how many times the string exists in the array.
 
-// function getNumberOfTimes(arr, str) {
-//     if ((Array.isArray(arr) === false) || (arr.length <= 1) || (typeof(str) != "string")) {
-//     return "Invalid input";
-//     }
-//     let count = 0;
-//     for (let i = 0; i <= arr.length; i++) {
-//         if (arr[i] == str) {
-//             count++;
-//         }
-//     if ((Array.isArray(arr)) && (arr.length > 1) && (typeof(str) == "string")) {
-//         return count;
-//     }}
-// }
-// myArray = ["cat", "dog", "cat"]
-// console.log(getNumberOfTimes(myArray, "cat"))
+function getNumberOfTimes(arr, str) {
+    if ((Array.isArray(arr) === false) || (arr.length <= 1) || (typeof(str) != "string")) {
+    return "Invalid input";
+    }
+  let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === str) {
+            count++;
+        }
+    }
+    return count;
+}
+
+myArray = ["cat", "dog", "cat"]
+console.log(getNumberOfTimes(myArray, "cat"))
 
 
 // Write a function called findAboveFreezing that takes in an array
@@ -276,7 +276,7 @@ module.exports = {
     getLongerArray,
     arrayHasValue,
     getLastIndexOf,
-    // getNumberOfTimes,
+    getNumberOfTimes,
     findAboveFreezing,
     returnString,
     // sortArrayBasedOnNumber,
