@@ -94,8 +94,6 @@ function getNumberOfTimes(arr, str) {
     return count;
 }
 
-myArray = ["cat", "dog", "cat"]
-console.log(getNumberOfTimes(myArray, "cat"))
 
 
 // Write a function called findAboveFreezing that takes in an array
@@ -182,19 +180,21 @@ function popAndShift(arr) {
 
 // Write a function called oddValuesAtEvenIndex that takes an array as a parameter
 // Return a new array that contains all the odd values of the original array that were located at an even index.
-// function oddValuesAtEvenIndex(arr) {
-//     if ((Array.isArray(arr) === false)){
-//         return "Invalid input";
-//     }for (let i = 0; i < arr.length; i++) {
-//         if ((arr[i] % 2 != 0) && (i % 2 === 0))   {
-//             return arr[i];
-//         }
-    
-//     }
-// }
+function oddValuesAtEvenIndex(arr) {
+    if ((Array.isArray(arr) === false)){
+        return "Invalid input";
+        }
+        let newArr = []
+        for (let i = 0; i < arr.length; i++) {
+        if ((arr[i] % 2 != 0) && (typeof(arr[i]) === "number") && (i % 2 === 0))   {
+            newArr.push(arr[i]);
+    }
+}
+    return newArr;
+}
 
-// myArray = [7, 2, 5, 11]
-// console.log(oddValuesAtEvenIndex(myArray))
+myArray = [7, 2, "cat", 11]
+console.log(oddValuesAtEvenIndex(myArray))
 
 
 
@@ -282,7 +282,7 @@ module.exports = {
     // sortArrayBasedOnNumber,
     concatArrays,
     popAndShift,
-    // oddValuesAtEvenIndex,
+    oddValuesAtEvenIndex,
     getUpperCase,
 };
 
