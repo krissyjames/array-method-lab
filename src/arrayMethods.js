@@ -193,8 +193,7 @@ function oddValuesAtEvenIndex(arr) {
     return newArr;
 }
 
-myArray = [7, 2, "cat", 11]
-console.log(oddValuesAtEvenIndex(myArray))
+
 
 
 
@@ -227,10 +226,19 @@ function getUpperCase(arr) {
 // Return the updated array.
 
 
+function deleteAllOddValues(arr) {
+    if ((!Array.isArray(arr)) || (arr.length < 1)) {
+        return "Invalid input";
+    } for (let i =0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0)    {
+            delete arr[i];
+    }
+    } 
+    return arr;
+}
 
-
-
-
+myArray = [1, 2, 3, 4]
+console.log(deleteAllOddValues(myArray))
 
 
 
@@ -284,6 +292,7 @@ module.exports = {
     popAndShift,
     oddValuesAtEvenIndex,
     getUpperCase,
+    deleteAllOddValues,
 };
 
 
