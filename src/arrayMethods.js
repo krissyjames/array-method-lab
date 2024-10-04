@@ -237,16 +237,30 @@ function deleteAllOddValues(arr) {
     return arr;
 }
 
-myArray = [1, 2, 3, 4]
-console.log(deleteAllOddValues(myArray))
+
 
 
 
 // Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
 // Return the age of the first cat found with that name.
+// function getCatNumber(nestArr, str) {
+//     let index;
+//     let ageIndex;
+//     for (let i = 0; i < nestArr.length; i++) {
+//         if (nestArr[i].indexOf(str) != -1) {
+//             index = i;
+//         }
+//     }
+//     let catAge = nestArr[index][ageIndex]
+//     return catAge;
+// }
 
-
-
+// let arr1 = ["Tigger", 8]
+// let arr2 = ["Nancy", 6]
+// let nestedArr = [arr1, arr2]
+// console.log(nestedArr[0].indexOf("Tigger"))
+// console.log(nestedArr[0][1])
+// console.log(getCatNumber(nestedArr, "Tigger"))
 
 
 
@@ -293,6 +307,7 @@ module.exports = {
     oddValuesAtEvenIndex,
     getUpperCase,
     deleteAllOddValues,
+    // getCatNumber,
 };
 
 
