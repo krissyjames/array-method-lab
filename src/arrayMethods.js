@@ -157,9 +157,6 @@ function sortArrayBasedOnNumber(arr, num) {
 }
 }
 
-let myArray = [3, "a", 4, 1, 5]
-console.log(sortArrayBasedOnNumber(myArray, 2));
-
 
 
 // Write a function called concatArrays that takes in two arrays as parameters.
@@ -270,24 +267,31 @@ function deleteAllOddValues(arr) {
 
 // Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
 // Return the age of the first cat found with that name.
-// function getCatNumber(nestArr, str) {
-//     let index;
-//     let ageIndex;
-//     for (let i = 0; i < nestArr.length; i++) {
-//         if (nestArr[i].indexOf(str) != -1) {
-//             index = i;
-//         }
-//     }
-//     let catAge = nestArr[index][ageIndex]
-//     return catAge;
-// }
+function getCatNumber(nestArr, str) {
+    if (!Array.isArray(nestArr)) {
+        return "Invalid input"
+    }
+    let index;
+    let ageIndex;
+    for (let i = 0; i < nestArr.length; i++) {
+        if (nestArr[i].indexOf(str) != -1) {
+            index = i;
+            ageIndex = nestArr[i].pop()
+        }
+    }
+    if (typeof ageIndex === "number") {
+        return ageIndex;
+    } else {
+    return "Cat not found"
+}
+}
 
-// let arr1 = ["Tigger", 8]
-// let arr2 = ["Nancy", 6]
-// let nestedArr = [arr1, arr2]
+let arr1 = ["Tigger", 8]
+let arr2 = ["Nancy", 6]
+let nestedArr = [arr1, arr2]
 // console.log(nestedArr[0].indexOf("Tigger"))
 // console.log(nestedArr[0][1])
-// console.log(getCatNumber(nestedArr, "Tigger"))
+console.log(getCatNumber(nestedArr, "Nancy"))
 
 
 
@@ -334,7 +338,7 @@ module.exports = {
     oddValuesAtEvenIndex,
     getUpperCase,
     deleteAllOddValues,
-    // getCatNumber,
+    getCatNumber,
 };
 
 
