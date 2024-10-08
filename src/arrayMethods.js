@@ -130,8 +130,35 @@ function returnString(arr) {
 // If the number is odd, return the array sorted in descending order.
 // If the number is even, return the array sorted in ascending order
 
+function sortArrayBasedOnNumber(arr, num) {
+    if ((!Array.isArray(arr) || (arr.length < 1))){
+        return "Invalid input";
+    } let firstType = typeof arr[0];
+        for (i = 0; i < arr.length; i++) {
+        console.log(firstType);
+        let secType = arr[i];
+        if ((typeof secType) !== firstType){
+            return "Invalid input"
+        }
+    }
+    if ((Array.isArray(arr)) && (arr.length > 1) && (num % 2 != 0) && (typeof arr[0] === "number")) {
+        arr.sort(function(a, b){return b - a});
+        return arr;
+    } if ((Array.isArray(arr)) && (arr.length > 1) && (num % 2 === 0) && (typeof arr[0] === "number")) {
+        arr.sort(function(a, b){return a - b});
+        return arr;
+    } if ((Array.isArray(arr)) && (arr.length > 1) && (num % 2 != 0) && (typeof arr[0] === "string")) {
+        arr.sort();
+        arr.reverse();
+        return arr;
+    } if ((Array.isArray(arr)) && (arr.length > 1) && (num % 2 === 0) && (typeof arr[0] === "string")) {
+        arr.sort();
+        return arr;
+}
+}
 
-
+let myArray = [3, "a", 4, 1, 5]
+console.log(sortArrayBasedOnNumber(myArray, 2));
 
 
 
@@ -301,7 +328,7 @@ module.exports = {
     getNumberOfTimes,
     findAboveFreezing,
     returnString,
-    // sortArrayBasedOnNumber,
+    sortArrayBasedOnNumber,
     concatArrays,
     popAndShift,
     oddValuesAtEvenIndex,
